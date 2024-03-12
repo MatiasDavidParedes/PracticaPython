@@ -16,3 +16,5 @@ class Loginmanager():
         """
         self.__usuario = input("Ingrese usuario: ")
         self.__password = input("Ingrese pasword: ")
+
+# End-of-file (EOF)
