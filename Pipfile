@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+cffi = "==1.16.0"
+cryptography = "==42.0.5"
+markupsafe = "==2.1.5"
+passlib = "==1.7.4"
+pycparser = "==2.21"
+werkzeug = "==3.0.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"

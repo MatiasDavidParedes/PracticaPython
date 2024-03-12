@@ -1,4 +1,4 @@
-"""Breve descripción de la clase.
+"""Breve descripción de la fuente.
 """
 
 class Loginmanager():
@@ -7,14 +7,13 @@ class Loginmanager():
 
     def __init__(self):
 
-         self.__login = False
-         self.__usuario = ""
-         self.__password = ""
+         self.login = False
+         self.usuario = ""
+         self.password = ""
 
     def logeo_usuario(self):
-        """Breve descripción de la clase.
+        """Breve descripción del metodo.
         """
-        self.__usuario = input("Ingrese usuario: ")
-        self.__password = input("Ingrese pasword: ")
-
+        self.usuario = input("Ingrese usuario: ")
+        self.password = input("Ingrese pasword: ")
 # End-of-file (EOF)
