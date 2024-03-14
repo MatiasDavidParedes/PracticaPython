@@ -1,22 +1,20 @@
 """Breve descripción de la fuente.
 """
 
-from services.login_services import Loginmanager
-from services.db_services import dbconnection
+import tkinter as tk
+from services.login_services import LoginManager
 
+# Crear la ventana principal y pasarla a la clase LoginManager
+root = tk.Tk()
+Login_Manager = LoginManager(root)
+root.mainloop()
 
-class Controlador:
-    """Breve descripción de la clase."""
-
-    def saludo_inicial(self):
-        """Breve descripción del metodo."""
-        print("Bienvenido a mi primer programa de Python.")
-
-        # Crear la ventana principal y pasarla a la clase Loginmanager
-
-    root = tk.Tk()
-    app = LoginManager(root)
-    root.mainloop()
-
-
-# End-of-file (EOF)
+# Después de cerrar la ventana principal de Tkinter, puedes verificar el estado del login así:
+if Login_Manager.login_successful:
+    print(
+        "El usuario ha iniciado sesión correctamente."
+    )  # Nos vamos al siguiente paso de la aplicacion
+else:
+    print(
+        "Inicio de sesión fallido o ventana cerrada sin iniciar sesión."
+    )  # Mostramos error.

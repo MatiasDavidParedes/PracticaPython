@@ -1,8 +1,13 @@
+"""Breve descripción de la fuente.
+"""
+
 import tkinter as tk
 from tkinter import messagebox
 
 
 class LoginManager:
+    """Breve descripción de la clase."""
+
     def __init__(self, master):
         self.master = master
         self.master.title("Inicio de sesión")
@@ -54,6 +59,7 @@ class LoginManager:
         self.login_successful = None
 
     def validate_login(self):
+        """Breve descripción del metodo."""
         user = self.user_entry.get()
         password = self.password_entry.get()
         if user == "David" and password == "Setia":
@@ -65,15 +71,3 @@ class LoginManager:
 
         # Aquí puedes cerrar la ventana o realizar otra acción
         # self.master.destroy()  # Descomentar si deseas cerrar la ventana automáticamente
-
-
-# Crear la ventana principal y pasarla a la clase LoginManager
-root = tk.Tk()
-app = LoginManager(root)
-root.mainloop()
-
-# Después de cerrar la ventana principal de Tkinter, puedes verificar el estado del login así:
-if app.login_successful:
-    print("El usuario ha iniciado sesión correctamente.")
-else:
-    print("Inicio de sesión fallido o ventana cerrada sin iniciar sesión.")
