@@ -11,36 +11,34 @@ class LoginManager:
     def __init__(self, master):
         self.master = master
         self.master.title("Inicio de sesión")
+        self.master.geometry("400x300")
+        self.master.configure(bg="#f0f0f0")
 
-        # Establece el tamaño y la posición de la ventana
-        self.master.geometry("400x300")  # Ajusta a tus necesidades
-
-        # Configurar colores y estilo
-        self.master.configure(bg="#f0f0f0")  # Color de fondo
-
-        # Crear el frame contenedor
         self.frame = tk.Frame(self.master, bg="#f0f0f0")
         self.frame.place(relx=0.5, rely=0.5, anchor="center")
 
-        # Campo de texto para el usuario
         self.user_label = tk.Label(self.frame, text="Usuario:", bg="#f0f0f0")
         self.user_label.grid(row=0, column=0, pady=(0, 5))
         self.user_entry = tk.Entry(self.frame)
         self.user_entry.grid(row=0, column=1, pady=(0, 5))
 
-        # Campo de texto para la contraseña
         self.password_label = tk.Label(self.frame, text="Contraseña:", bg="#f0f0f0")
         self.password_label.grid(row=1, column=0)
         self.password_entry = tk.Entry(self.frame, show="*")
         self.password_entry.grid(row=1, column=1)
 
-        # Botón para enviar
+        # Botón para iniciar sesión
         self.submit_button = tk.Button(
             self.frame, text="Iniciar sesión", command=self.validate_login
         )
-        self.submit_button.grid(row=2, column=0, columnspan=2, pady=(5, 0))
+        self.submit_button.grid(row=2, column=0, pady=(5, 0))
 
-        # Enlaces para recordar contraseña y olvidó contraseña
+        # Botón de registro, colocado al lado del botón de inicio de sesión
+        self.register_button = tk.Button(
+            self.frame, text="Registrarse", command=self.register_user
+        )
+        self.register_button.grid(row=2, column=1, pady=(5, 0))
+
         self.remember_me_check = tk.Checkbutton(
             self.frame, text="Recordarme", bg="#f0f0f0"
         )
@@ -55,11 +53,10 @@ class LoginManager:
         )
         self.forgot_password_link.grid(row=4, column=0, columnspan=2)
 
-        # Atributo para almacenar el estado del inicio de sesión
         self.login_successful = None
 
     def validate_login(self):
-        """Breve descripción del metodo."""
+        """Breve descripción de la clase."""
         user = self.user_entry.get()
         password = self.password_entry.get()
         if user == "David" and password == "Setia":
@@ -69,5 +66,9 @@ class LoginManager:
             self.login_successful = False
             messagebox.showerror("Error de login", "Usuario o contraseña incorrectos")
 
-        # Aquí puedes cerrar la ventana o realizar otra acción
-        # self.master.destroy()  # Descomentar si deseas cerrar la ventana automáticamente
+    def register_user(self):
+        """Breve descripción de la clase."""
+        # Aquí podrías implementar la lógica para registrar a un nuevo usuario
+        messagebox.showinfo(
+            "Registro", "La funcionalidad de registro aún no está implementada."
+        )
