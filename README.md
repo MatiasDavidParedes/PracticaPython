@@ -9,4 +9,4 @@ DBA_USER=
 DBA_PASSWORD=
 DBA_ESQUEMA=
 
-El programa se inicia desde la clase funcion_controlador.py
+El programa se inicia desde la clase Services/Start.py

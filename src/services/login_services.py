@@ -53,6 +53,8 @@ class LoginManager:
         )
         self.forgot_password_link.grid(row=4, column=0, columnspan=2)
 
+        self.forgot_password_link.bind("<Button-1>", self.remember_password)
+
         self.login_successful = None
 
     def validate_login(self):
@@ -71,4 +73,12 @@ class LoginManager:
         # Aquí podrías implementar la lógica para registrar a un nuevo usuario
         messagebox.showinfo(
             "Registro", "La funcionalidad de registro aún no está implementada."
+        )
+
+    def remember_password(self, event=None):
+        """Breve descripción de la clase."""
+        # Aquí podrías implementar la lógica para registrar a un nuevo usuario
+        messagebox.showinfo(
+            "Recordatorio de Contraseña",
+            "La funcionalidad de registro aún no está implementada.",
         )
