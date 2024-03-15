@@ -3,6 +3,7 @@
 
 import tkinter as tk
 from tkinter import messagebox
+from services.registrer_services import RegisterManager
 
 
 class LoginManager:
@@ -39,10 +40,10 @@ class LoginManager:
         )
         self.register_button.grid(row=2, column=1, pady=(5, 0))
 
-        self.remember_me_check = tk.Checkbutton(
+        """self.remember_me_check = tk.Checkbutton(
             self.frame, text="Recordarme", bg="#f0f0f0"
         )
-        self.remember_me_check.grid(row=3, column=0, columnspan=2, pady=(5, 0))
+        self.remember_me_check.grid(row=3, column=0, columnspan=2, pady=(5, 0))"""
 
         self.forgot_password_link = tk.Label(
             self.frame,
@@ -71,9 +72,9 @@ class LoginManager:
     def register_user(self):
         """Breve descripción de la clase."""
         # Aquí podrías implementar la lógica para registrar a un nuevo usuario
-        messagebox.showinfo(
-            "Registro", "La funcionalidad de registro aún no está implementada."
-        )
+        RegistroUsuario = tk.Tk()
+        appregistrousuario = RegisterManager(master=RegistroUsuario)
+        RegistroUsuario.mainloop()
 
     def remember_password(self, event=None):
         """Breve descripción de la clase."""

@@ -9,4 +9,6 @@ DBA_USER=
 DBA_PASSWORD=
 DBA_ESQUEMA=
 
-El programa se inicia desde la clase Services/Start.py
+El programa se inicia desde la clase Services/Start.py.
+
+para generar ejecutable: pyinstaller --onefile .\src\Start.py
