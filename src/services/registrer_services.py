@@ -64,3 +64,6 @@ class RegisterManager:
             "Registro", "Usuario registrado exitosamente. \n" + str(user_data)
         )
         self.master.destroy()
+
+
+# End-of-file (EOF)

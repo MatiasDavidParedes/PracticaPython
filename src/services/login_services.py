@@ -83,3 +83,6 @@ class LoginManager:
             "Recordatorio de Contraseña",
             "La funcionalidad de registro aún no está implementada.",
         )
+
+
+# End-of-file (EOF)
